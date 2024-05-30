@@ -27,8 +27,10 @@ To run an Awk script, navigate to the directory containing your script and execu
 ```bash
 awk -f script_name.awk input_file.csv
 ```
-    
-You can also use the premade scripts:
+
+## Troubleshooting
+Windows uses the carriage return and line feed (\r\n) as a newline character, while Unix/Linux uses just the line feed (\n). If your AWK script was created or edited in a Windows environment, you'll need to convert these line endings to Unix/Linux format for it to run correctly on Unix-like systems.
+
 ```bash
-console.awk
+sed -i 's/\r$//' your_script.awk
 ```
